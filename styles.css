@@ -1,0 +1,340 @@
+/* Thiết lập cơ bản */
+
+body {
+  font-family: sans-serif;
+
+  /* THÊM NỀN Ở ĐÂY */
+
+  background-image: url("anhnenweb.jpg");
+
+  background-size: cover;
+
+  background-attachment: fixed;
+
+  background-color: #08315a;
+
+  margin: 0;
+
+  padding: 0;
+
+  text-align: center;
+}
+
+/* Header */
+
+.header {
+  padding: 40px 0 20px 0;
+}
+
+.header h1 {
+  /* ĐÃ CẬP NHẬT FONT LOBSTER */
+
+  font-family: "Lobster", cursive;
+
+  color: #d70040; /* Màu đỏ/hồng mạnh mẽ */
+
+  font-size: 4rem; /* Kích thước lớn, phù hợp với font script */
+
+  font-weight: 400; /* Lobster mặc định không cần thiết lập weight */
+
+  letter-spacing: normal; /* Đặt lại khoảng cách chữ về bình thường */
+
+  text-shadow: none; /* Xóa bóng đổ */
+}
+
+/* Container chính */
+
+.container {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 30px;
+
+  padding: 20px;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+/* Định dạng chung cho Card sản phẩm */
+
+.product-card {
+  background-color: white;
+
+  border-radius: 20px;
+
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+
+  width: 45%;
+
+  overflow: hidden;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+.card-content {
+  display: flex;
+
+  flex-direction: column;
+
+  height: 100%;
+}
+
+/* Phần visual (phía trên của card) */
+
+.card-visual {
+  height: 300px;
+
+  border-top-left-radius: 20px;
+
+  border-top-right-radius: 20px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+/* Màu Gradient cho Card 1 (Hồng/Tím) */
+
+.visual-pink {
+  background: linear-gradient(135deg, #f9e2f9 0%, #f7c9e0 50%, #fcecfc 100%);
+}
+
+/* Màu Gradient cho Card 2 (Xanh Ngọc/Xanh Biển) */
+
+.visual-blue {
+  background: linear-gradient(135deg, #c3f5f5 0%, #a0e6db 50%, #c3f5f5 100%);
+}
+
+/* --- CARD 1: Ài Ồ Sì Mà (Grid Ảnh Sản Phẩm) --- */
+
+.product-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  grid-template-rows: repeat(2, 1fr);
+
+  gap: 10px;
+
+  width: 80%;
+
+  height: 80%;
+}
+
+.product-thumb {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+
+  opacity: 0.8;
+}
+
+.product-thumb:nth-child(5) {
+  grid-column: 2 / 3;
+
+  grid-row: 2 / 3;
+}
+
+/* Phần thông tin (phía dưới của card) */
+
+.card-info {
+  padding: 25px;
+
+  text-align: left;
+
+  flex-grow: 1;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+.card-info h2 {
+  font-size: 1.8rem;
+
+  margin: 0 0 10px 0;
+
+  font-weight: 700;
+
+  color: #333;
+}
+
+.description {
+  color: #777;
+
+  margin-bottom: 20px;
+
+  font-size: 1rem;
+}
+
+.info-section {
+  margin-top: auto;
+}
+
+/* Các chi tiết về giá và người bán */
+
+.price-box {
+  text-align: center;
+
+  margin-bottom: 20px;
+}
+
+.price-text {
+  display: inline-block;
+
+  padding: 10px 30px;
+
+  border-radius: 50px;
+
+  background-color: #f7a9cf;
+
+  color: white;
+
+  font-weight: 700;
+
+  font-size: 1.1rem;
+}
+
+.seller-details h3,
+.card-info h3 {
+  font-size: 1.1rem;
+
+  color: #444;
+
+  border-bottom: 1px dashed #eee;
+
+  padding-bottom: 5px;
+
+  margin-top: 15px;
+
+  margin-bottom: 5px;
+}
+
+.seller-details p {
+  margin: 3px 0;
+
+  font-size: 0.95rem;
+
+  color: #666;
+}
+
+/* Lưu ý */
+
+.note-box {
+  margin-top: 20px;
+
+  padding: 15px;
+
+  border-radius: 10px;
+
+  font-size: 0.9rem;
+
+  line-height: 1.4;
+}
+
+.note-pink {
+  background-color: #ffe0f5;
+
+  border: 1px solid #f7c9e0;
+
+  color: #a3005a;
+}
+
+.note-blue {
+  background-color: #e0faff;
+
+  border: 1px solid #a0e6db;
+
+  color: #005c5c;
+}
+
+.note-box ul {
+  list-style-type: none;
+
+  padding-left: 0;
+
+  margin-top: 5px;
+}
+
+.note-box li {
+  margin-bottom: 2px;
+}
+
+/* Chú thích Form */
+
+.form-instruction {
+  margin-top: 5px;
+
+  font-size: 0.85rem;
+
+  color: #a3005a;
+
+  font-style: italic;
+}
+
+/* Đảm bảo nút button vẫn hiển thị đẹp */
+
+.button {
+  /* ... các thuộc tính chung của nút ... */
+}
+
+/* --- ICON FACEBOOK NỔI GÓC PHẢI (ĐÃ CẬP NHẬT F) --- */
+
+.facebook-icon-button {
+  /* Vị trí */
+
+  position: fixed;
+
+  bottom: 30px;
+
+  right: 30px;
+
+  z-index: 1000;
+
+  /* Định kiểu Icon */
+
+  background-color: #3b5998;
+
+  color: white;
+
+  width: 60px;
+
+  height: 60px;
+
+  border-radius: 50%;
+
+  /* Canh giữa chữ 'f' */
+
+  text-align: center;
+
+  line-height: 60px; /* Canh giữa theo chiều dọc */
+
+  font-size: 3rem; /* Kích thước chữ f */
+
+  font-weight: bold;
+
+  font-family: Arial, sans-serif; /* Đảm bảo chữ f hiển thị rõ */
+
+  text-decoration: none;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.facebook-icon-button:hover {
+  background-color: #2d4373;
+
+  transform: scale(1.05);
+}
